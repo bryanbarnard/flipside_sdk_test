@@ -162,3 +162,12 @@ cython_debug/
 
 !/.env
 !/.env
+/.env
+/.idea/.gitignore
+/.idea/aws.xml
+/.idea/flipside_sdk_test.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
