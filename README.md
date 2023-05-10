@@ -13,10 +13,11 @@ https://github.com/FlipsideCrypto/sdk
 5. Run the app `python app.py`
 
 Expected results should be similar to:
+
 ```
 query_stats:
  - query_id: clhhv3pjh00hvn30tng79twb6
  - rows returned: 251
  - elapsed seconds: 15
  - exec seconds: 9
- ```
+```
