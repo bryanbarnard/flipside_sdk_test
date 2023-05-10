@@ -2,6 +2,7 @@ import os
 from flipside import Flipside
 from dotenv import load_dotenv
 
+
 # load variables from .env file
 load_dotenv()
 
@@ -22,6 +23,7 @@ sql = f"""
     ORDER BY BLOCK_TIMESTAMP DESC
     """
 
+
 query_result_set = sdk.query(
     sql=sql,
     ttl_minutes=TTL_MINUTES,
@@ -31,10 +33,12 @@ query_result_set = sdk.query(
     page_size=PAGE_SIZE
 )
 
+
 log_message = f'query_stats:\n - query_id: {query_result_set.query_id}\n' \
               f' - query status: {query_result_set.status}\n' \
               f' - rows returned: {query_result_set.run_stats.record_count}\n' \
               f' - elapsed seconds: {query_result_set.run_stats.elapsed_seconds}\n' \
               f' - exec seconds: {query_result_set.run_stats.query_exec_seconds}\n'
+
 
 print(log_message)
