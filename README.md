@@ -17,6 +17,7 @@ Expected results should be similar to:
 ```
 query_stats:
  - query_id: clhhv3pjh00hvn30tng79twb6
+ - query status: QUERY_STATE_SUCCESS
  - rows returned: 251
  - elapsed seconds: 15
  - exec seconds: 9
