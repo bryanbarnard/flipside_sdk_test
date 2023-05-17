@@ -8,7 +8,7 @@ https://github.com/FlipsideCrypto/sdk
 ## To Run
 1. Clone the repo
 2. Create a .env file that contains your Flipside Crypto API Key. Details on how to get an API key and API Docs can be found at https://docs.flipsidecrypto.com/flipside-api/get-started
-3. Create a python environment using venv based on Python Version 3.9.12
+3. Create a python environment using venv
 4. Install dependencies, `python -m pip install -r requirements.txt`
 5. Run the app `python app.py`
 
