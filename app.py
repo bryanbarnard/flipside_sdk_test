@@ -14,20 +14,13 @@ PAGE_SIZE = 100
 
 sdk = Flipside(FLIPSIDE_API_KEY)
 sql = """
-        SELECT
-          BLOCK_NUMBER as "block_number",
-          (SELECT DATE_PART(epoch_second, BLOCK_TIMESTAMP)) as epoch_timestamp,
-          BLOCK_TIMESTAMP AS "timestamp",
-          TOKENID AS "gk_token_id",
-          PRICE AS "eth_amount",
-          PLATFORM_NAME AS "exchange",
-          SELLER_ADDRESS as "seller",
-          BUYER_ADDRESS as "buyer",
-          TX_HASH as "tx_hash"
-        FROM ethereum.core.ez_nft_sales
-        WHERE BLOCK_TIMESTAMP > '2023-04-17 00:00:00.000'
-        AND NFT_ADDRESS = '0x8fb5a7894ab461a59acdfab8918335768e411414' 
-        ORDER BY BLOCK_TIMESTAMP DESC;
+                SELECT *
+                FROM ethereum.core.fact_decoded_event_logs
+                WHERE CONTRACT_ADDRESS = '0x98ca78e89dd1abe48a53dee5799f24cc1a462f2d'
+                AND EVENT_NAME = 'ExtendExpiry'
+                AND BLOCK_TIMESTAMP > '2023-05-31 02:08:35'
+                ORDER BY BLOCK_TIMESTAMP DESC
+                LIMIT 20000;
     """
 
 i = 1

@@ -1,2 +1,2 @@
-flipside~=2.0.7
+flipside~=2.0.8
 python-dotenv==1.0.0
